@@ -8,7 +8,7 @@ const { href, title, body } = Astro.props;
 ---
 
 <li class="link-card">
-	<a href={href}>
+	<a target="_blank" rel="noopener noreferrer" href={href}>
 		<h2>
 			{title}
 			<span>&rarr;</span>
@@ -20,7 +20,7 @@ const { href, title, body } = Astro.props;
 </li>
 <style>
 	:root {
-		--link-gradient: linear-gradient(45deg, #4f39fa, #da62c4 30%, var(--color-border) 60%);
+		--link-gradient: linear-gradient(45deg, #39fa39, #339c4d 30%, var(--color-border) 60%);
 	}
 
 	.link-card {
@@ -34,14 +34,14 @@ const { href, title, body } = Astro.props;
 		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 	}
 
-	.link-card > a {
+	.link-card>a {
 		width: 100%;
 		text-decoration: none;
 		line-height: 1.4;
 		padding: 1em 1.3em;
 		border-radius: 0.35rem;
 		color: var(--text-color);
-		background-color: white;
+		background-color: rgb(60, 59, 73);
 		opacity: 0.8;
 	}
 
@@ -65,7 +65,7 @@ const { href, title, body } = Astro.props;
 	}
 
 	.link-card:is(:hover, :focus-within) h2 {
-		color: #4f39fa;
+		color: #2fe65d;
 	}
 
 	.link-card:is(:hover, :focus-within) h2 span {
