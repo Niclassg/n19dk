@@ -4,83 +4,99 @@ import Card from "../components/Card.astro";
 ---
 
 <Layout title="n19.app">
-	<main>
-		<div class="center">
-			<h1><span class="text-gradient">n19.app</span></h1>
-			<p>
-				Welcome to my Website.
-			</p>
-		</div>
+  <main>
+    <div class="center">
+      <h1><span class="text-gradient">n19.app</span></h1>
+      <p>Welcome to my Website.</p>
+    </div>
 
-		<div class="link-card-grid">
-			<h2 class="text-gradient center">Socials</h2>
-			<Card body="Follow me on Github" title="Github" href="https://github.com/niclassg" />
-			<Card body="Find me on Twitter" title="Twitter" href="https://twitter.com/niclasgleesborg" />
-			<Card body="Watch me on Youtube" title="Youtube"
-				href="https://www.youtube.com/channel/UCl9j2CnCt_WmLpgY7KWH_Fw" />
-			<h2 class="text-gradient center">Projects</h2>
-			<Card body="Create protected links" title="Protectl.ink" href="https://github.com/Niclassg/protectlink" />
-			<Card body="VSCode extension to obfuscate secrets while recording or streaming" title="Hide my Secrets"
-				href="https://github.com/Niclassg/hide-my-secrets" />
-		</div>
+    <div class="link-card-grid">
+      <h2 class="text-gradient center">Socials</h2>
+      <Card
+        body="Follow me on Github"
+        title="Github"
+        href="https://github.com/niclassg"
+      />
+      <Card
+        body="Find me on Twitter"
+        title="Twitter"
+        href="https://twitter.com/niclasgleesborg"
+      />
+      <Card
+        body="Watch me on Youtube"
+        title="Youtube"
+        href="https://www.youtube.com/channel/UCl9j2CnCt_WmLpgY7KWH_Fw"
+      />
+      <Card
+        body="Visit my Blog"
+        title="Blog"
+        href="https://niclassg.github.io/"
+      />
+      <h2 class="text-gradient center">Projects</h2>
+      <Card
+        body="Create protected links"
+        title="Protectl.ink"
+        href="https://github.com/Niclassg/protectlink"
+      />
+      <Card
+        body="VSCode extension to obfuscate secrets while recording or streaming"
+        title="Hide my Secrets"
+        href="https://github.com/Niclassg/hide-my-secrets"
+      />
+    </div>
 
-		<p class="center">
-			That's all folks.
-		</p>
-		<p>Read more <a href="/privacy/">about</a> Astro!</p>
-
-	</main>
+    <p class="center">That's all folks.</p>
+    <p>Read more <a href="/privacy/">about</a> Astro!</p>
+  </main>
 </Layout>
 
 <style>
-	:root {
-		--astro-gradient: linear-gradient(0deg, #39fa39, #339c4d);
-	}
+  :root {
+    --astro-gradient: linear-gradient(0deg, #39fa39, #339c4d);
+  }
 
-	h1 {
-		margin: 2rem 0;
-	}
+  h1 {
+    margin: 2rem 0;
+  }
 
-	main {
-		margin: auto;
-		padding: 1em;
-		max-width: 60ch;
-	}
+  main {
+    margin: auto;
+    padding: 1em;
+    max-width: 60ch;
+  }
 
-	.center {
-		flex: auto;
-		justify-content: center;
-		text-align: center;
-		align-items: center;
+  .center {
+    flex: auto;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
 
-	}
+  .link-card-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
 
-	.link-card-grid {
-		display: flex;
-		flex-direction: column;
-		gap: 1rem;
-	}
+  .text-gradient {
+    font-weight: 900;
+    background-image: var(--astro-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 100% 200%;
+    background-position-y: 100%;
+    border-radius: 0.4rem;
+    animation: pulse 4s ease-in-out infinite;
+  }
 
-	.text-gradient {
-		font-weight: 900;
-		background-image: var(--astro-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 100% 200%;
-		background-position-y: 100%;
-		border-radius: 0.4rem;
-		animation: pulse 4s ease-in-out infinite;
-	}
+  @keyframes pulse {
+    0%,
+    100% {
+      background-position-y: 0%;
+    }
 
-	@keyframes pulse {
-
-		0%,
-		100% {
-			background-position-y: 0%;
-		}
-
-		50% {
-			background-position-y: 80%;
-		}
-	}
+    50% {
+      background-position-y: 80%;
+    }
+  }
 </style>
